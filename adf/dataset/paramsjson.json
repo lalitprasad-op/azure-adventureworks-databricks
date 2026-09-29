@@ -1,0 +1,33 @@
+{
+    "name": "paramsjson",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "AzureDataLakeStorageLinkService",
+            "type": "LinkedServiceReference"
+        },
+        "annotations": [],
+        "type": "Json",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobFSLocation",
+                "fileName": "git.json",
+                "fileSystem": "params"
+            }
+        },
+        "schema": {
+            "type": "object",
+            "properties": {
+                "file_name": {
+                    "type": "string"
+                },
+                "dir_name": {
+                    "type": "string"
+                },
+                "rel_url": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
